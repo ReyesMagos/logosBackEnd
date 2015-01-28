@@ -21,10 +21,10 @@ module.exports = {
             type: 'string',
             required: true
         },email:{
-            type:'email'
+            type:'email',
             required:true,
             unique:true
-        }
+        },
         idNumber: {
             type: 'integer',
             required: true
