@@ -24,6 +24,12 @@ module.exports = {
             type:'email',
             required:true,
             unique:true
+        },phone:{
+            type:'integer',
+            required:true
+        }, mobile:{
+            type:'integer',
+            required:true
         },
         idNumber: {
             type: 'integer',
@@ -51,6 +57,7 @@ module.exports = {
         toJSON: function() {
             var obj = this.toObject();
             delete obj.password;
+            delete obj.passwordConfirmation;
             delete obj._csrf;
             delete obj.encryptedPassword;
             return obj;

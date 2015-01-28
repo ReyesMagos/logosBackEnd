@@ -17,7 +17,9 @@ module.exports = {
 			username:req.param('username'),
 			password:req.param('password'),
 			passwordConfirmation:req.param('passwordConfirmation'),
-			email:req.param('email')
+			email:req.param('email'),
+			phone:req.param('phone'),
+			mobile:req.param('mobile')
 		}
 
 		User.create(user, function userCreated (err, user) {
