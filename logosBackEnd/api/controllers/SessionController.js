@@ -21,6 +21,8 @@ module.exports = {
             }
             req.logIn(user, function(err) {
                 if (err) res.send(err);
+                req.session.User= user;
+                console.log('user in controller: '+JSON.stringify(user));
                 return res.send({
                     message: 'login successful'
                 });
