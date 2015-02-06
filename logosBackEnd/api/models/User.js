@@ -31,7 +31,6 @@ module.exports = {
             type:'integer',
             required:true
         },
-
         idNumber: {
             type: 'integer',
             required: true

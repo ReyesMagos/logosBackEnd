@@ -14,7 +14,6 @@ module.exports = {
 			age:req.param('age'),
 			idNumber:req.param('idNumber'),
 			idType:req.param('idType'),
-			username:req.param('username'),
 			password:req.param('password'),
 			passwordConfirmation:req.param('passwordConfirmation'),
 			email:req.param('email'),
@@ -25,8 +24,8 @@ module.exports = {
 		User.create(user, function userCreated (err, user) {
 			if(err){
 				//return res.json(err);
-				//var error= sails.generateErrMessages(err);
-				console.log('hay un error');
+				var error= sails.generateErrMessages(err);
+				//console.log('hay un error');
 				return res.json(err);
 			}
 
