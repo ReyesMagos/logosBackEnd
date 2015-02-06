@@ -49,7 +49,7 @@ module.exports = {
             required: true
         }, encryptedPassword:{
             type:'string'
-        }/*/
+        }
         toJSON: function() {
             var obj = this.toObject();
             delete obj.password;
@@ -58,7 +58,7 @@ module.exports = {
             delete obj.encryptedPassword;
             return obj;
         }
-        /*/
+        
     },
     beforeCreate: function(values, next) {
         var password = values.password;

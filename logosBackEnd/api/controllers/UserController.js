@@ -25,9 +25,9 @@ module.exports = {
 		User.create(user, function userCreated (err, user) {
 			if(err){
 				//return res.json(err);
-				var error= sails.generateErrMessages(err);
+				//var error= sails.generateErrMessages(err);
 				console.log('hay un error');
-				return res.json(error);
+				return res.json(err);
 			}
 
 			console.log(JSON.stringify(user));
