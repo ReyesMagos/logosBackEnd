@@ -31,6 +31,7 @@ module.exports = {
             type:'integer',
             required:true
         },
+        
         idNumber: {
             type: 'integer',
             required: true
@@ -39,11 +40,6 @@ module.exports = {
             type: 'string',
             enum: ['cedula', 'pasaporte'],
             required: true
-        },
-        username: {
-            type: 'string',
-            required: true,
-            unique:true
         },
         password: {
             type: 'string',
