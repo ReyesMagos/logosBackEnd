@@ -66,7 +66,9 @@ module.exports = {
         if (!password || !passwordConfirmation || password != values.passwordConfirmation) {
             var passwordDoesNotMatchError = [{
                 name: 'passwordDoesNotMatch',
-                message: 'Las Contraseñas deben Coincidir'
+                message: 'Las Contraseñas deben Coincidir', 
+                contra:password,
+                confim:passwordConfirmation
             }]
             return next({
                 err: passwordDoesNotMatchError
