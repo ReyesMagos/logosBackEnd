@@ -26,12 +26,22 @@ module.exports = {
 			if(err){
 				//return res.json(err);
 				var error= sails.generateErrMessages(err);
-				
 				return res.json(error);
 			}
 			res.json(user);
 
 		});
+	}, index:function  (req, res, next) {
+
+		User.find(function usersFounded (err, users) {
+			if(err)
+				next(err);
+			res.json(users);
+
+
+			// body...
+		});
+		// body...
 	}
 	
 };
