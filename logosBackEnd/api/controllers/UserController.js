@@ -26,16 +26,22 @@ module.exports = {
 			if(err){
 				//return res.json(err);
 				var error= sails.generateErrMessages(err);
+				console.log('hay un error');
 				return res.json(error);
 			}
+
+			console.log(JSON.stringify(user));
 			res.json(user);
 
 		});
 	}, index:function  (req, res, next) {
 
 		User.find(function usersFounded (err, users) {
-			if(err)
+			if(err){
+				console.log('error al buscar');
 				next(err);
+			}
+			console.log(JSON.stringify(users));
 			res.json(users);
 
 
