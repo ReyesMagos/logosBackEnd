@@ -16,7 +16,7 @@ module.exports = {
 			idType:req.param('idType'),
 			password:req.param('password'),
 			passwordConfirmation:req.param('passwordConfirmation'),
-			email:req.param('email'),
+			username:req.param('email'),
 			phone:req.param('phone'),
 			mobile:req.param('mobile')
 		}

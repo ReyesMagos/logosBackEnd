@@ -20,7 +20,7 @@ module.exports = {
         age: {
             type: 'string',
             required: true
-        },email:{
+        },username:{//email
             type:'email',
             required:true,
             unique:true
