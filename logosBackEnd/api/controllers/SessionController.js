@@ -20,10 +20,10 @@ module.exports = {
                 res.send(err);
             }
             req.logIn(user, function(err) {
-                if (err) res.send(err);
+                if (err) res.json(err);
                 req.session.User= user;
                 console.log('user in controller: '+JSON.stringify(user));
-                return res.send({
+                return res.json({
                     message: 'login successful'
                 });
             });
